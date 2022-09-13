@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard</title>
+    
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/search.css">
+    <link rel="stylesheet" href="CSS/signup.css">
+    <link rel="stylesheet" href="CSS/seller.css">
+    <link rel="stylesheet" href="../CSS/font.css">   
+
+</head>
+<body>
+
+    <img src="img/loader.gif" class="loader">
+
+    <div class="alert-box">
+        <img src="img/error.png" class="alert-img">
+        <p class="alert-msg">Error message</p>
+    </div>
+
+    <a href="/"> <img src="../img/dark-logo.png" class="logo" alt=""></a>
+
+    <!-- become seller element -->
+    <div class="become-seller hide">
+        <p class="heading">Become a seller</p>
+        <p class="des">Why become a seller ?</p>
+        <ul>
+            <li>
+                Customers can spend less time shopping for what they want. They can easily browse through many 
+                items at a time and buy what they like. When online, customers can find items that are available 
+                in physical stores far away from them or not found in their locality.
+            </li>
+            <li>
+                One of the biggest advantages of ecommerce to business that keep sellers 
+                interested in online selling is cost reduction. Many sellers have to pay lots 
+                to maintain their physical store. They may need to pay extra up front costs like rent, 
+                repairs, store design, inventory etc.
+            </li>
+            <li>
+                Sellers don’t have to spend a lot of money to promote their items. 
+                The world of ecommerce has several affordable, quick ways to market online.
+            </li>
+            <li>
+                An important advantage of ecommerce to business is that sellers can provide flexibility to customers. 
+                One highlight is that the product and services are ready 24x7. 
+                The result is that seller can offer his item any place, any time.
+            </li>
+            <li>
+                A seller with a physical store may only be able to reach a certain number of buyers. They can deliver to 
+                the customers’ homes but there can be distance limitations. Several e-commerce marketplaces have their own 
+                logistics and delivery system.
+            </li>
+
+        </ul>
+            
+            <br><br>
+        <button class="btn" id="apply-btn">apply for seller account</button>
+    </div>
+
+    <!-- apply form -->
+    <div class="apply-form hide">
+        <input type="text" id="business-name" placeholder="business name / company name / shop name">
+        <textarea id="business-add" placeholder="address"></textarea>
+        <textarea id="about" placeholder="about"></textarea>
+        <input type="text" id="number" placeholder="number">
+        <input type="checkbox" checked class="checkbox" id="terms-and-cond">
+        <label for="terms-and-cond">agree to our <a href="">terms and conditions</a></label>
+        <br>
+        <input type="checkbox" checked class="checkbox" id="legitInfo">
+        <label for="legitInfo">all information is legit</label>    
+        <button class="submit-btn" id="apply-form-btn">apply</button>
+    </div>
+
+    <!-- products list -->
+    <div class="product-listing hide">
+        <div class="add-product">
+            <p class="add-product-title">add product</p>
+            <button class="btn" onclick="location.href = '/add-product'">add product</button>
+        </div>
+        <img src="img/no-products.png" class="no-product-image hide">
+
+        <!-- delete alert -->
+        <div class="delete-alert">
+            <div class="alert">
+                <button class="close-btn"><img src="img/close.png"></button>
+                <img src="img/delete-warning.png" class="delete-svg">
+                <p class="text">are you sure ? you want to delete this product</p>
+                <button class="delete-btn">delete</button>
+            </div>
+        </div>
+
+        <!-- cards -->
+        <div class="product-container">
+        <!--    -->
+        </div>
+    </div>
+
+    <script src="js/token.js"></script>
+    <script src="js/createProduct.js"></script>
+    <script src="js/seller.js"></script>
+    
+</body>
+</html>

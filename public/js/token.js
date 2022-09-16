@@ -2,7 +2,7 @@ let char = `123abcde.fmnopqlABCDE@FJKLMNOPQRSTUVWXYZ456789stuvwxyz0!#$%&ijkrgh'*
 
 const generateToken = (key) => {
     let token = '';
-    for( let i = 0; i < key.length; i = i+1){ //i++ non funziona e non so il perché
+    for( let i = 0; i < key.length; i = i+1){
         let index = char.indexOf(key[i]);
         let randomIndex = Math.floor(Math.random() * index);
         token += char[randomIndex] + char[index - randomIndex];
